@@ -30,11 +30,11 @@ const Home = () => {
 	if (!weatherData) {
 		return <Text>Error loading weather data</Text>;
 	}
-
-	const temperature = weatherData.main.temp;
 	const temp_minimum = weatherData.main.temp_min;
 	const temp_maximum = weatherData.main.temp_max;
+	const temperature = weatherData.main.temp;
 	const mainWeather = weatherData.weather[0].main;
+	// console.log(mainWeather);
 	const weatherDescription = weatherData.weather[0].description;
 	const city = weatherData.name; // Extract city name from the response
 	const localTimestamp = new Date(); // Assuming you have the local timestamp

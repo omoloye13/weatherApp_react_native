@@ -20,14 +20,14 @@ const useWeatherWithLocation = () => {
 				}
 
 				let location = await Location.getCurrentPositionAsync({});
-				console.log(location);
+				// console.log(location);
 				const { latitude, longitude } = location.coords;
-				console.log(location.coords);
+				// console.log(location.coords);
 
 				const response = await axios.get(
 					`https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${API_KEY}&units=metric`
 				);
-				console.log(response.data);
+				// console.log(response.data);
 
 				setWeatherData(response.data);
 				setLoading(false);
